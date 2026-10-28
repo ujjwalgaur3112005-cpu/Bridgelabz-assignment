@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="form" novalidate>
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <span class="error" id="nameError"></span>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <span class="error" id="passwordError"></span>
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3 id="message"></h3>
+
+    <script>
+        const form = document.getElementById("form");
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+
+        const message = document.getElementById("message");
+
+        function validateName() {
+            nameError.textContent =
+                name.value.trim() === "" ? "Name is required" : "";
+        }
+
+        function validateEmail() {
+            emailError.textContent =
+                email.value.trim() === ""
+                    ? "Email is required"
+                    : !email.value.includes("@")
+                        ? "Email must contain @"
+                        : "";
+        }
+
+        function validatePassword() {
+            passwordError.textContent =
+                password.value.length < 6
+                    ? "Password must be at least 6 characters"
+                    : "";
+        }
+
+        name.addEventListener("input", validateName);
+        email.addEventListener("input", validateEmail);
+        password.addEventListener("input", validatePassword);
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            validateName();
+            validateEmail();
+            validatePassword();
+
+            if (
+                nameError.textContent ||
+                emailError.textContent ||
+                passwordError.textContent
+            ) {
+                message.textContent = "";
+                return;
+            }
+
+            message.textContent = "Form Submitted Successfully";
+            message.style.color = "green";
+        });
+    </script>
+
+</body>
+</html>
