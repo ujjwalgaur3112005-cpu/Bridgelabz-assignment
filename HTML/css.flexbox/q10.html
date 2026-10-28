@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 5%;
+        background: #2c3e50;
+        color: white;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+        padding: 30px;
+    }
+
+    article, aside {
+        padding: 25px;
+        border-radius: 10px;
+        background: #f4f6f8;
+    }
+
+    article h1 {
+        animation: slideIn 1s ease both;
+    }
+
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .box {
+        flex: 1 1 120px;
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        background: #3498db;
+        color: white;
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 700px) {
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .layout {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <header>
+        <h2>My Website</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#article">Article</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header
+
+<diclass="layout" id="home">
+    <article id="article">
+        <h1>Welcome to My Website</h1>
+        <p>This layout combines CSS Grid and Flexbox to create
+        a clean and responsive webpage.</p>
+
+        <div class="boxes">
+            <div class="box">HTML</div>
+            <div class="box">CSS</div>
+            <div class="box">JavaScript</div>
+        </div>
+    </article>
+
+    <aside id="about">
+        <h2>About</h2>
+        <p>This sidebar contains additional information about the website.</p>
+        <p>Learn about web design and responsive layouts.</p>
+    </aside>
+</div>
+
+<footer id="contact">
+    <p>&copy; 2026 My Website. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

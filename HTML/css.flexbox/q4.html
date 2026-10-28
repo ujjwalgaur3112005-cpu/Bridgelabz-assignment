@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+    }
+
+    .dashboard {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 20px;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    header {
+        grid-column: 1 / -1;
+        padding: 20px;
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+    }
+
+    aside {
+        padding: 20px;
+        background: #34495e;
+        color: white;
+    }
+
+    aside a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 12px 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: minmax(150px, auto);
+        gap: 20px;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px #ddd;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 18px #bbb;
+    }
+
+    .wide {
+        grid-column: span 2;
+    }
+
+    @media (max-width: 650px) {
+        .dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        header {
+            grid-column: auto;
+        }
+
+        .content {
+            grid-template-columns: 1fr;
+        }
+
+        .wide {
+            grid-column: span 1;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="dashboard">
+        <header><h1>Admin Dashboard</h1></header>
+
+
+    <aside>
+        <h2>Navigation</h2>
+        <a href="#overview">Overview</a>
+        <a href="#users">Users</a>
+        <a href="#reports">Reports</a>
+        <a href="#settings">Settings</a>
+    </aside>
+
+    <main class="content">
+        <div class="box" id="overview"><h2>Overview</h2></div>
+        <div class="box" id="users"><h2>Users</h2></div>
+        <div class="box wide" id="reports"><h2>Reports</h2></div>
+        <div class="box" id="settings"><h2>Settings</h2></div>
+    </main>
+</div>
+
+
+</body>
+</html>

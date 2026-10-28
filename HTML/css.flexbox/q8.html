@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+
+    h1 {
+        text-align: center;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    figure {
+        margin: 0;
+        overflow: hidden;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px #ddd;
+    }
+
+    figure img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    figure img:hover {
+        transform: scale(1.08);
+    }
+
+    figcaption {
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+
+
+<div class="gallery">
+    <figure>
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500" alt="Mountain landscape">
+        <figcaption>Beautiful Mountains</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500" alt="Lake and mountains">
+        <figcaption>Peaceful Lake</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" alt="Green forest">
+        <figcaption>Green Forest</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Ocean beach">
+        <figcaption>Ocean Beach</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" alt="Mountain peaks">
+        <figcaption>Mountain Peaks</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500" alt="Forest path">
+        <figcaption>Forest Path</figcaption>
+    </figure>
+</div>
+
+
+</body>
+</html>

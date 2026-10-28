@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flip Animation</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #ecf0f1;
+        }
+
+
+    .scene {
+        width: 300px;
+        height: 380px;
+        perspective: 1000px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+    }
+
+    .scene:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    .face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        text-align: center;
+        border-radius: 15px;
+        backface-visibility: hidden;
+        box-shadow: 0 5px 15px #bbb;
+    }
+
+    .front {
+        background: white;
+    }
+
+    .front img {
+        width: 200px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .back {
+        background: #3498db;
+        color: white;
+        transform: rotateY(180deg);
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="scene">
+        <div class="card">
+            <div class="face front">
+                <h2>Nature Explorer</h2>
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400" alt="Mountain lake">
+                <p>Hover to discover more</p>
+            </div>
+
+
+        <div class="face back">
+            <h2>Discover Nature</h2>
+            <p>Nature gives us peace, fresh air and beautiful landscapes.
+            Explore new places and protect our environment.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

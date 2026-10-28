@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+
+    h1 {
+        text-align: center;
+    }
+
+    .pricing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        margin: 50px auto;
+    }
+
+    .card {
+        flex: 1;
+        max-width: 300px;
+        padding: 30px 20px;
+        text-align: center;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px #ddd;
+        animation: fadeIn 1s ease both;
+        transition: transform 0.3s;
+    }
+
+    .card:nth-child(2) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        background: #d6eaf8;
+        animation-delay: 0.2s;
+    }
+
+    .card:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .price {
+        font-size: 30px;
+        font-weight: bold;
+        color: #2980b9;
+    }
+
+    button {
+        padding: 12px 22px;
+        border: none;
+        border-radius: 6px;
+        background: #2980b9;
+        color: white;
+        cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 750px) {
+        .pricing {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>Choose Your Plan</h1>
+
+
+<div class="pricing">
+    <div class="card">
+        <h2>Basic</h2>
+        <p class="price">₹199</p>
+        <p>Basic features</p>
+        <p>Email support</p>
+        <button>Choose Plan</button>
+    </div>
+
+    <div class="card">
+        <h2>Premium</h2>
+        <p class="price">₹499</p>
+        <p>All basic features</p>
+        <p>Priority support</p>
+        <button>Choose Plan</button>
+    </div>
+
+    <div class="card">
+        <h2>Pro</h2>
+        <p class="price">₹999</p>
+        <p>Advanced features</p>
+        <p>24/7 support</p>
+        <button>Choose Plan</button>
+    </div>
+</div>
+
+
+</body>
+</html>

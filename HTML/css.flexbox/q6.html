@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .layout {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        background: #34495e;
+        color: white;
+    }
+
+    header nav {
+        display: flex;
+        gap: 15px;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+    }
+
+    aside {
+        grid-area: sidebar;
+        padding: 20px;
+        background: #ecf0f1;
+    }
+
+    aside a {
+        display: block;
+        padding: 10px 0;
+        color: #2c3e50;
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-content: start;
+    }
+
+    article {
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #ddd;
+    }
+
+    footer {
+        grid-area: footer;
+        padding: 20px;
+        text-align: center;
+        background: #34495e;
+        color: white;
+    }
+
+    @media (max-width: 800px) {
+        .layout {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "main"
+                "sidebar"
+                "footer";
+        }
+    }
+
+    @media (max-width: 550px) {
+        main {
+            grid-template-columns: 1fr;
+        }
+
+        header {
+            flex-direction: column;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="layout">
+        <header>
+            <h1>My Blog</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#articles">Articles</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+
+    <aside>
+        <h2>Categories</h2>
+        <a href="#technology">Technology</a>
+        <a href="#education">Education</a>
+        <a href="#lifestyle">Lifestyle</a>
+    </aside>
+
+    <main id="articles">
+        <article id="technology">
+            <h2>Technology Trends</h2>
+            <p>Explore modern technologies, AI and web development.</p>
+        </article>
+
+        <article id="education">
+            <h2>Learning Every Day</h2>
+            <p>Discover practical ways to improve your skills.</p>
+        </article>
+    </main>
+
+    <footer id="contact">
+        <p>Contact: hello@example.com | &copy; 2026 My Blog</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
