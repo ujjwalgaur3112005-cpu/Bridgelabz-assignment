@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Manager</title>
+</head>
+<body>
+    <h2>Product List Manager</h2>
+
+    <input type="text" id="productInput" placeholder="Enter product">
+    <button id="addBtn">Add Product</button>
+
+    <ul id="productList"></ul>
+
+    <script>
+        const input = document.getElementById("productInput");
+        const list = document.getElementById("productList");
+
+        document.getElementById("addBtn").addEventListener("click", function () {
+            if (input.value.trim() === "") return;
+
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+            span.textContent = input.value;
+
+            const edit = document.createElement("button");
+            edit.textContent = "Edit";
+            edit.className = "edit";
+
+            const del = document.createElement("button");
+            del.textContent = "Delete";
+            del.className = "delete";
+
+            li.append(span, edit, del);
+            list.appendChild(li);
+
+            input.value = "";
+        });
+
+        let editingItem = null;
+
+        list.addEventListener("click", function (e) {
+            const li = e.target.closest("li");
+            if (!li) return;
+
+            if (e.target.classList.contains("delete")) {
+                li.remove();
+                if (editingItem === li) editingItem = null;
+            }
+
+            if (e.target.classList.contains("edit")) {
+                if (editingItem && editingItem !== li) {
+                    saveEdit(editingItem);
+                }
+
+                if (editingItem === li) return;
+
+                const span = li.querySelector("span");
+                const input = document.createElement("input");
+
+                input.value = span.textContent;
+                input.className = "editInput";
+
+                span.replaceWith(input);
+                editingItem = li;
+                input.focus();
+            }
+        });
+
+        function saveEdit(li) {
+            const input = li.querySelector(".editInput");
+
+            if (!input) return;
+
+            const span = document.createElement("span");
+            span.textContent = input.value.trim() || "Unnamed Product";
+
+            input.replaceWith(span);
+            editingItem = null;
+        }
+
+        document.addEventListener("click", function (e) {
+            if (editingItem && !editingItem.contains(e.target)) {
+                saveEdit(editingItem);
+            }
+        });
+    </script>
+</body>
+</html>
