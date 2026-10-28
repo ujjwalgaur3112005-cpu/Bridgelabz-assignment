@@ -1,0 +1,20 @@
+javascript
+"use strict";
+
+const input = prompt("Enter pyramid height (default 5):");
+const rows = input === null || input.trim() === "" ? 5 : Number(input);
+
+if (!Number.isInteger(rows) || rows < 1) {
+    console.log("Enter a valid positive number");
+} else {
+    for (let i = 1; i <= rows; i++) {
+        let pattern = "";
+
+        for (let j = 1; j <= i; j++) {
+            pattern += "* ";
+        }
+
+        console.log(pattern);
+    }
+}
+

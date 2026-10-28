@@ -1,0 +1,47 @@
+javascript
+"use strict";
+
+const rawData = [
+    '{"user":"Alex","age":25}',
+    '{"id":2}',
+    '{invalid}',
+    '{"user":"Mina","age":"22"}'
+];
+
+const clean = [];
+const errors = [];
+
+for (let i = 0; i < rawData.length; i++) {
+    try {
+        const data = JSON.parse(rawData[i]);
+
+        if (!data.user || data.age === undefined) {
+            throw new Error("Missing user or age");
+        }
+
+        const age = Number(data.age);
+
+        if (!Number.isFinite(age) || age < 0) {
+            throw new Error("Invalid age");
+        }
+
+        clean.push({
+            user: data.user,
+            age: age
+        });
+    } catch (error) {
+        errors.push({
+            line: i + 1,
+            error: error.message
+        });
+
+        console.log(`Line ${i + 1}: ${error.message}`);
+    }
+}
+
+const under18 = clean.filter(user => user.age < 18);
+
+console.log("Clean Data:", clean);
+console.log("Errors:", errors);
+console.log("Under 18 Users:", under18);
+

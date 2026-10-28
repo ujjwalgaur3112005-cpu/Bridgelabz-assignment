@@ -1,0 +1,28 @@
+javascript
+"use strict";
+
+const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
+
+const valid = [];
+const invalid = [];
+
+for (let i = 0; i < apiData.length; i++) {
+    const value = apiData[i];
+    const numberValue = Number(value);
+    const booleanValue = Boolean(value);
+    const stringValue = String(value);
+
+    if (value === null || value === undefined || String(value).trim() === "" || Number.isNaN(numberValue)) {
+        invalid.push(value);
+        console.log("Invalid:", value, "Number:", numberValue, "Boolean:", booleanValue, "String:", stringValue);
+    } else {
+        valid.push(numberValue);
+        console.log("Valid:", value, "Number:", numberValue, "Boolean:", booleanValue, "String:", stringValue);
+    }
+}
+
+console.log("Valid Numeric Data:", valid);
+console.log("Invalid Data:", invalid);
+console.log("Valid Count:", valid.length);
+console.log("Invalid Count:", invalid.length);
+
