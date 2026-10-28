@@ -1,0 +1,111 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Practice</title>
+<style>
+/* Apply basic styles to all elements. */
+* { box-sizing: border-box; }
+
+/* Element selector: styles all h1 elements. */
+h1 { color: #1d4ed8; text-align: center; }
+
+/* Element selector: styles all paragraphs. */
+p { color: #475569; line-height: 1.6; }
+
+/* Class selector: styles elements with the note class. */
+.note {
+    background: #fef3c7;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* ID selector: styles the element with id="special". */
+#special {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+/* Attribute selector: styles links that open external pages. */
+a[target="_blank"] { color: #7c3aed; }
+
+/* Child combinator: selects only direct li children of .items. */
+.items > li { padding: 8px; border-bottom: 1px solid #ddd; }
+
+/* Descendant combinator: selects paragraphs inside .content. */
+.content p { background: #eff6ff; padding: 8px; }
+
+/* Adjacent sibling combinator: selects p immediately after h2. */
+h2 + p { border-left: 4px solid #2563eb; padding-left: 10px; }
+
+/* General sibling combinator: selects all p siblings after h3. */
+h3 ~ p { font-style: italic; }
+
+/* Page layout and spacing. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+header, main, footer {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+}
+main {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #0001;
+}
+footer { text-align: center; color: #64748b; }
+</style>
+</head>
+<body>
+<header>
+    <h1>CSS Selectors Practice</h1>
+</header>
+
+<main>
+    <h2>Element and Class Selectors</h2>
+    <p>This paragraph uses the element selector.</p>
+    <p class="note">This paragraph uses the class selector .note.</p>
+
+    <h2>ID Selector</h2>
+    <p id="special">This paragraph is selected using #special.</p>
+
+    <h2>Attribute Selector</h2>
+    <a href="https://example.com" target="_blank">External Example Link</a>
+
+    <h2>Child Combinator (&gt;)</h2>
+    <ul class="items">
+        <li>Direct child one</li>
+        <li>Direct child two
+            <ul>
+                <li>Nested item (not a direct child)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <section class="content">
+        <h2>Descendant Combinator</h2>
+        <p>This paragraph is inside the content section.</p>
+    </section>
+
+    <h2>Adjacent Sibling (+)</h2>
+    <p>This paragraph immediately follows the h2.</p>
+    <p>This paragraph does not immediately follow the h2.</p>
+
+    <h3>General Sibling (~)</h3>
+    <p>This paragraph is a sibling after h3.</p>
+    <p>This paragraph is also a sibling after h3.</p>
+</main>
+
+<footer>
+    <p>CSS Selectors Practice Page</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Demonstration</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f0f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 { color: #0f172a; }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.tooltip-box {
+    position: relative;
+    padding: 18px 24px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #0002;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2563eb;
+}
+.tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1e293b;
+}
+.tooltip-box:hover .tooltip-text,
+.tooltip-box:focus .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip-box:focus {
+    outline: 2px solid #2563eb;
+}
+</style>
+</head>
+<body>
+<h1>CSS Tooltip Demo</h1>
+
+<div class="container">
+    <div class="tooltip-box" tabindex="0">
+        🔍 Search
+        <span class="tooltip-text">Search for information</span>
+    </div>
+
+    <div class="tooltip-box" tabindex="0">
+        ✉ Email
+        <span class="tooltip-text">Open your email</span>
+    </div>
+
+    <div class="tooltip-box" tabindex="0">
+        ⚙ Settings
+        <span class="tooltip-text">Manage your settings</span>
+    </div>
+
+    <div class="tooltip-box" tabindex="0">
+        👤 Profile
+        <span class="tooltip-text">View your profile</span>
+    </div>
+</div>
+</body>
+</html>
+

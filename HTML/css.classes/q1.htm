@@ -1,0 +1,74 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-Classes Demo</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: #f1f5f9;
+}
+h1 { text-align: center; color: #1e293b; }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.example {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 4px 12px #0001;
+}
+a {
+    color: #2563eb;
+    display: inline-block;
+    margin: 10px 0;
+}
+a:hover { color: #dc2626; }
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+button:active { background: #991b1b; }
+input { padding: 8px; width: 100%; }
+input:focus {
+    outline: 2px solid #2563eb;
+    background: #eff6ff;
+}
+li { padding: 6px; }
+li:nth-child(even) { background: #dbeafe; }
+</style>
+</head>
+<body>
+<h1>CSS Pseudo-Classes</h1>
+
+<div class="container">
+    <section class="example">
+        <h3>:hover</h3>
+        <a href="#">Hover over this link</a>
+        <p>Changes the link color when the pointer is over it.</p>
+    </section>
+
+    <section class="example">
+        <h3>:active</h3>
+        <button>Press Me</button>
+        <p>Changes the button background while it is being pressed.</p>
+    </section>
+
+    <section class="example">
+        <h3>:focus</h3>
+        <input type="text" placeholder="Click
+

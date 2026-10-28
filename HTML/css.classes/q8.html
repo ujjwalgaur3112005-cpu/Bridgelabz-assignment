@@ -1,0 +1,95 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Sizing Comparison</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1 { text-align: center; color: #1e293b; }
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+}
+.example { flex: 1 1 280px; }
+.box {
+    width: 280px;
+    max-width: 100%;
+    height: 180px;
+    padding: 25px;
+    border: 10px solid #1d4ed8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+}
+.content-box {
+    box-sizing: content-box;
+    background: #dbeafe;
+}
+.border-box {
+    box-sizing: border-box;
+    background: #dcfce7;
+    border-color: #15803d;
+}
+.note {
+    max-width: 650px;
+    margin-top: 20px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    line-height: 1.6;
+    box-shadow: 0 3px 10px #0001;
+}
+</style>
+</head>
+<body>
+<h1>Box-Sizing Comparison</h1>
+
+<div class="comparison">
+    <section class="example">
+        <h2>content-box</h2>
+        <div class="box content-box">
+            <strong>Content Box</strong>
+            <span>Width: 280px content</span>
+        </div>
+        <p>The padding and border are added outside the declared width.</p>
+    </section>
+
+    <section class="example">
+        <h2>border-box</h2>
+        <div class="box border-box">
+            <strong>Border Box</strong>
+            <span>Width: 280px total</span>
+        </div>
+        <p>The declared width includes the content, padding, and border.</p>
+    </section>
+</div>
+
+<div class="note">
+    <strong>Explanation:</strong> With <code>content-box</code>, the total width
+    is 280 + 50 padding + 20 border = 350px. With
+    <code>border-box</code>, the total width remains 280px because padding
+    and border are included in the declared width.
+</div>
+</body>
+</html>
+
