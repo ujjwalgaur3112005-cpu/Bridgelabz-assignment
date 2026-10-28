@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin: 40px auto;
+    }
+
+    .model {
+        width: 280px;
+        padding: 25px;
+        background: #f1c40f;
+        outline: 2px dashed #333;
+    }
+
+    .border-layer {
+        padding: 15px;
+        background: #3498db;
+        border: 8px solid #2c3e50;
+    }
+
+    .padding-layer {
+        padding: 20px;
+        background: #2ecc71;
+    }
+
+    .content {
+        background: white;
+        padding: 15px;
+    }
+
+    .border-box {
+        width: 280px;
+        box-sizing: border-box;
+        padding: 25px;
+        border: 8px solid #e74c3c;
+        background: #f9ca24;
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>CSS Box Model Exploration</h1>
+
+
+<div class="container">
+    <div>
+        <h2>Default Box Model</h2>
+        <div class="model">
+            Margin Area
+            <div class="border-layer">
+                Border
+                <div class="padding-layer">
+                    Padding
+                    <div class="content">Content</div>
+                </div>
+            </div>
+        </div>
+        <p>Width excludes padding and border.</p>
+    </div>
+
+    <div>
+        <h2>Border-Box Model</h2>
+        <div class="border-box">
+            Content + Padding + Border
+        </div>
+        <p>Width includes padding and border.</p>
+    </div>
+</div>
+
+
+</body>
+</html>

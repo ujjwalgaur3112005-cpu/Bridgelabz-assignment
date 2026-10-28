@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <style>
+        /* Attribute selector */
+        input[type="text"] {
+            border: 2px solid #3498db;
+            padding: 8px;
+        }
+
+```
+    /* Attribute selector: links starting with https */
+    a[href^="https"] {
+        color: green;
+    }
+
+    /* Pseudo-class: hover */
+    li:hover {
+        background: #ffeaa7;
+    }
+
+    /* Pseudo-class: focus */
+    input:focus {
+        outline: 2px solid orange;
+    }
+
+    /* Pseudo-class: nth-child */
+    li:nth-child(2) {
+        color: #e74c3c;
+        font-weight: bold;
+    }
+
+    /* Pseudo-element: before */
+    li::before {
+        content: "✓ ";
+        color: green;
+    }
+
+    /* Pseudo-element: after */
+    li::after {
+        content: " ★";
+        color: orange;
+    }
+
+    /* Child combinator: direct children */
+    .parent > p {
+        color: blue;
+    }
+
+    /* Adjacent sibling combinator */
+    h2 + p {
+        font-style: italic;
+    }
+
+    /* General sibling combinator */
+    h2 ~ h3 {
+        color: purple;
+    }
+
+    /* Descendant combinator */
+    .parent span {
+        background: lightyellow;
+    }
+</style>
+```
+
+</head>
+<body>
+    <h1>Advanced CSS Selectors</h1>
+
+```
+<input type="text" placeholder="Enter your name">
+
+<h2>Item List</h2>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+</ul>
+
+<div class="parent">
+    <p>This paragraph is a direct child.</p>
+    <div>
+        <span>This span is a descendant.</span>
+    </div>
+</div>
+
+<h2>Heading Two</h2>
+<p>This is the adjacent paragraph.</p>
+<h3>Heading Three</h3>
+<h3>Another Heading Three</h3>
+
+<p>
+    Visit
+    <a href="https://example.com">Example Website</a>
+</p>
+```
+
+</body>
+</html>
