@@ -1,0 +1,43 @@
+html
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Login Form</h2>
+
+<form id="loginForm">
+    <input id="username" placeholder="Username"><br><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    if (username.length < 5) {
+        message.textContent = "Username must have at least 5 characters";
+        message.style.color = "red";
+        return;
+    }
+
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s])\S{8,}$/;
+
+    if (!regex.test(password)) {
+        message.textContent = "Password must have 8 characters, uppercase, lowercase, number and special character";
+        message.style.color = "red";
+        return;
+    }
+
+    message.textContent = "Login validation successful!";
+    message.style.color = "green";
+});
+</script>
+</body>
+</html>
+

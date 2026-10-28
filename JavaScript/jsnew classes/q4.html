@@ -1,0 +1,58 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Dynamic Form Builder</h2>
+
+<div id="formContainer"></div>
+<pre id="result"></pre>
+
+<script>
+class FormBuilder {
+    constructor(fields) {
+        this.fields = fields;
+    }
+
+    createForm() {
+        let html = '<form id="dynamicForm">';
+
+        this.fields.forEach(field => {
+            html += `<label>${field.label}</label>
+            <input type="${field.type}" name="${field.name}" required><br><br>`;
+        });
+
+        html += '<button type="submit">Submit</button></form>';
+
+        document.getElementById("formContainer").innerHTML = html;
+
+        document.getElementById("dynamicForm").addEventListener("submit", e => {
+            e.preventDefault();
+            document.getElementById("result").textContent =
+                JSON.stringify(this.getFormData(), null, 2);
+        });
+    }
+
+    getFormData() {
+        let form = document.getElementById("dynamicForm");
+        let data = {};
+
+        this.fields.forEach(field => {
+            data[field.name] = form.elements[field.name].value;
+        });
+
+        return data;
+    }
+}
+
+let fields = [
+    { type: "text", label: "Username", name: "username" },
+    { type: "email", label: "Email", name: "email" },
+    { type: "password", label: "Password", name: "password" }
+];
+
+let builder = new FormBuilder(fields);
+builder.createForm();
+</script>
+</body>
+</html>
+```

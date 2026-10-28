@@ -1,0 +1,53 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Student Registration</h2>
+
+<form id="studentForm">
+    <input id="name" placeholder="Name"><br><br>
+    <input id="email" placeholder="Email"><br><br>
+    <input id="phone" placeholder="Phone"><br><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+    <button type="submit">Register</button>
+</form>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let fields = [
+        { id: "name", regex: /^[A-Za-z]+$/, error: "Name must contain alphabets only" },
+        { id: "email", regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, error: "Invalid email" },
+        { id: "phone", regex: /^\d{10}$/, error: "Phone must contain 10 digits" },
+        { id: "password", regex: /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/, error: "Password needs uppercase, number and special character" }
+    ];
+
+    let valid = true;
+
+    fields.forEach(field => {
+        let input = document.getElementById(field.id);
+        let oldError = input.nextElementSibling;
+
+        if (oldError && oldError.tagName === "SMALL") {
+            oldError.remove();
+        }
+
+        if (field.regex.test(input.value.trim())) {
+            input.style.border = "2px solid green";
+        } else {
+            input.style.border = "2px solid red";
+            let error = document.createElement("small");
+            error.style.color = "red";
+            error.textContent = field.error;
+            input.after(error);
+            valid = false;
+        }
+    });
+
+    if (valid) alert("Registration successful!");
+});
+</script>
+</body>
+</html>
+```

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Student Table Filter</h2>
+
+    <input type="text" id="search" placeholder="Search students">
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>CGPA</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable">
+            <tr><td>Rahul</td><td>CSE</td><td>8.5</td></tr>
+            <tr><td>Aman</td><td>ECE</td><td>7.8</td></tr>
+            <tr><td>Priya</td><td>IT</td><td>9.1</td></tr>
+            <tr><td>Rohit</td><td>CSE</td><td>8.0</td></tr>
+            <tr><td>Neha</td><td>AI</td><td>8.9</td></tr>
+        </tbody>
+    </table>
+
+    <p id="message"></p>
+
+    <script>
+        const search = document.getElementById("search");
+        const table = document.getElementById("studentTable");
+        const message = document.getElementById("message");
+
+        search.addEventListener("input", function () {
+            const value = search.value.toLowerCase();
+            const rows = table.querySelectorAll("tr");
+            let count = 0;
+
+            rows.forEach(function (row) {
+                if (row.textContent.toLowerCase().includes(value)) {
+                    row.style.display = "";
+                    count++;
+                } else {
+                    row.style.display = "none";
+                }
+            });
+
+            message.textContent = count === 0 ? "No results found" : "";
+        });
+    </script>
+</body>
+</html>

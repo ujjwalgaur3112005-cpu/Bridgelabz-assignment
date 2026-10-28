@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+
+    <style>
+        body.light {
+            background: white;
+            color: black;
+        }
+
+        body.dark {
+            background: #222;
+            color: white;
+        }
+
+        body.blue {
+            background: lightblue;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body data-theme="light" class="light">
+
+    <h2>Theme Switcher</h2>
+
+    <button onclick="changeTheme('light')">Light</button>
+    <button onclick="changeTheme('dark')">Dark</button>
+    <button onclick="changeTheme('blue')">Blue</button>
+
+    <script>
+        function changeTheme(theme) {
+            document.body.setAttribute("class", theme);
+            document.body.setAttribute("data-theme", theme);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class Product {
+    constructor(id, name, price, category) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+    applyDiscount(percent) {
+        this.price -= this.price * percent / 100;
+    }
+
+    displayDetails() {
+        return `${this.id} ${this.name} ${this.price} ${this.category}`;
+    }
+}
+
+let products = [
+    new Product(1, "Laptop", 50000, "Electronics"),
+    new Product(2, "Mouse", 800, "Accessories"),
+    new Product(3, "Phone", 20000, "Electronics"),
+    new Product(4, "Keyboard", 1500, "Accessories")
+];
+
+products[0].applyDiscount(10);
+
+products.filter(p => p.price > 1000).forEach(p => {
+    console.log(p.displayDetails());
+});
+</script>
+</body>
+</html>
+```

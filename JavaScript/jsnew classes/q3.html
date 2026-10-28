@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Library Management</h2>
+
+<input id="isbn" placeholder="Enter ISBN">
+<button onclick="issueBook()">Issue Book</button>
+
+<h3>Available Books</h3>
+<ul id="bookList"></ul>
+
+<script>
+class Book {
+    constructor(title, author, ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.isIssued = false;
+    }
+
+    issueBook() {
+        if (this.isIssued) return false;
+        this.isIssued = true;
+        return true;
+    }
+
+    returnBook() {
+        this.isIssued = false;
+    }
+}
+
+let books = [
+    new Book("JavaScript", "John", "101"),
+    new Book("Java", "James", "102"),
+    new Book("Python", "David", "103")
+];
+
+function displayBooks() {
+    let list = document.getElementById("bookList");
+    list.innerHTML = "";
+
+    books.filter(book => !book.isIssued).forEach(book => {
+        let li = document.createElement("li");
+        li.textContent = `${book.title} - ${book.author} - ${book.ISBN}`;
+        list.appendChild(li);
+    });
+}
+
+function issueBook() {
+    let isbn = document.getElementById("isbn").value.trim();
+    let book = books.find(b => b.ISBN === isbn);
+
+    if (!book) {
+        alert("Book not found!");
+    } else if (book.issueBook()) {
+        alert("Book issued successfully!");
+    } else {
+        alert("Book already issued!");
+    }
+
+    displayBooks();
+}
+
+displayBooks();
+</script>
+</body>
+</html>
+```
