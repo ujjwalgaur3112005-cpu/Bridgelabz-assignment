@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Assignments Q1-Q15</title>
+</head>
+<body>
+
+<header>
+    <h1>Ujjwal Gaur</h1>
+    <p>Email: ujjwalgaur3112005@gmail.com | Phone: 7579920221</p>
+    <p>Computer Science | AI & Data Science</p>
+</header>
+
+<nav>
+    <a href="#resume">Resume</a> |
+    <a href="#catalog">Product Catalog</a> |
+    <a href="#registration">Course Registration</a> |
+    <a href="#company">Company</a> |
+    <a href="#university">University</a> |
+    <a href="#restaurant">Restaurant</a> |
+    <a href="#conference">Conference</a> |
+    <a href="#report">Student Report</a> |
+    <a href="#travel">Travel</a> |
+    <a href="#dropdown">Dropdowns</a> |
+    <a href="#news">News</a> |
+    <a href="#quotes">Quotes</a> |
+    <a href="#blog">Blog</a> |
+    <a href="#movies">Movies</a> |
+    <a href="#portfolio">Portfolio</a>
+</nav>
+
+<hr>
+
+<main>
+
+<section id="resume">
+    <h1>Q1. Resume Page</h1>
+
+```
+<section>
+    <h2>About Me</h2>
+    <p>I am a Computer Science student interested in Artificial Intelligence, Data Science and Software Development.</p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>SQL</li>
+        <li>Data Structures</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <ol>
+        <li>KrashiMitra - Crop Recommendation System</li>
+        <li>AI-Based Full Stack Web Application</li>
+        <li>Student Management System</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Institute</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.Tech Computer Science</td>
+                <td>GLA University</td>
+                <td>2026</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+```
+
+</section>
+
+<hr>
+
+<section id="catalog">
+    <h1>Q2. Product Catalog</h1>
+
+```
+<table border="1">
+    <caption>Online Store Product Catalog</caption>
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="https://placehold.co/100x80?text=Headphones" alt="Headphones" width="100"></td>
+            <td>Headphones</td>
+            <td>Wireless headphones with clear sound.</td>
+            <td>₹1,500</td>
+            <td rowspan="2">In Stock</td>
+        </tr>
+        <tr>
+            <td><img src="https://placehold.co/100x80?text=Watch" alt="Smart Watch" width="100"></td>
+            <td>Smart Watch</td>
+            <td>Smart watch with fitness tracking.</td>
+            <td>₹2,500</td>
+        </tr>
+        <tr>
+            <td><img src="https://placehold.co/100x80?text=Keyboard" alt="Keyboard" width="100"></td>
+            <td>Keyboard</td>
+            <td>USB keyboard for computers.</td>
+            <td>₹800</td>
+            <td>Limited Stock</td>
+        </tr>
+        <tr>
+            <td colspan="5">Prices are subject to change.</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+</section>
+
+<hr>
+
+<section id="registration">
+    <h1>Q3. Course Registration Form</h1>
+
+```
+<form action="#" method="get">
+    <fieldset>
+        <legend>Student Information</legend>
+
+        <label for="studentName">Full Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+            <option value="java">Java Programming</option>
+            <option value="web">Web Development</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="data">Data Science</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Register</button>
+    </fieldset>
+</form>
+
+<h2>Available Course Schedules</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM</td>
+            <td>Mr. Sharma</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>12:00 PM</td>
+            <td>Ms. Verma</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>2:00 PM</td>
+            <td>Mr. Singh</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+</section>
+
+<hr>
+
+<section id="company">
+    <h1>Q4. Company Layout</h1>
+
+```
+<header>
+    <h2>TechVision Solutions</h2>
+</header>
+
+<nav>
+    <a href="#companyAbout">About</a> |
+    <a href="#services">Services</a>
+</nav>
+
+<main>
+    <section id="companyAbout">
+        <h2>About the Company</h2>
+        <p>TechVision Solutions provides modern technology services and software solutions to businesses.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services Offered</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Mobile Application Development</li>
+            <li>AI Solutions</li>
+            <li>Cloud Computing</li>
+        </ul>
+    </section>
+</main>
+
+<aside>
+    <h2>CEO Message</h2>
+    <blockquote>
+        Innovation and teamwork are the foundations of successful technology.
+    </blockquote>
+</aside>
+
+<footer>
+    <p>Email: contact@techvision.example</p>
+    <p>Address: Mathura, Uttar Pradesh, India</p>
+</footer>
+```
+
+</section>
+
+<hr>
+
+<section id="university">
+    <h1>Q5. University Hierarchy</h1>
+
+```
+<ul>
+    <li>University
+        <ul>
+            <li>Computer Science Department
+                <ol>
+                    <li>Java Programming
+                        <ul>
+                            <li>Variables</li>
+                            <li>Loops</li>
+                            <li>Classes and Objects</li>
+                        </ul>
+                    </li>
+                    <li>Web Development
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>Mathematics Department
+                <ol>
+                    <li>Calculus
+                        <ul>
+                            <li>Limits</li>
+                            <li>Derivatives</li>
+                        </ul>
+                    </li>
+                    <li>Statistics
+                        <ul>
+                            <li>Probability</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+</ul>
+```
+
+</section>
+
+<hr>
+
+<section id="restaurant">
+    <h1>Q6. Restaurant Menu</h1>
+
+```
+<header>
+    <h2>Delicious Corner Restaurant</h2>
+    <p>Fresh food for everyone!</p>
+</header>
+
+<nav>
+    <a href="#starters">Starters</a> |
+    <a href="#mainCourse">Main Course</a> |
+    <a href="#desserts">Desserts</a>
+</nav>
+
+<section id="starters">
+    <h2>Starters</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tomato Soup</td>
+                <td>Fresh tomato soup</td>
+                <td>₹100</td>
+            </tr>
+            <tr>
+                <td>French Fries</td>
+                <td>Crispy potato fries</td>
+                <td>₹120</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="mainCourse">
+    <h2>Main Course</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paneer Butter Masala</td>
+                <td>Paneer in creamy tomato gravy</td>
+                <td>₹250</td>
+            </tr>
+            <tr>
+                <td>Veg Biryani</td>
+                <td>Rice cooked with vegetables</td>
+                <td>₹200</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="desserts">
+    <h2>Desserts</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gulab Jamun</td>
+                <td>Sweet milk-solid dessert</td>
+                <td>₹80</td>
+            </tr>
+            <tr>
+                <td>Ice Cream</td>
+                <td>Vanilla ice cream</td>
+                <td>₹100</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>Contact: restaurant@example.com</p>
+    <p>Address: Mathura, Uttar Pradesh</p>
+</footer>
+```
+
+</section>
+
+<hr>
+
+<section id="conference">
+    <h1>Q7. Conference Schedule</h1>
+
+```
+<table border="1">
+    <caption>Technology Conference Schedule</caption>
+    <thead>
+        <tr>
+            <th>Session</th>
+            <th>Time</th>
+            <th>Topic</th>
+            <th>Speaker</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Morning</td>
+            <td>9:00 AM</td>
+            <td>Artificial Intelligence</td>
+            <td>Dr. Sharma</td>
+        </tr>
+        <tr>
+            <td>10:30 AM</td>
+            <td>Cloud Computing</td>
+            <td>Ms. Verma</td>
+        </tr>
+        <tr>
+            <td>Afternoon</td>
+            <td>1:00 PM</td>
+            <td>Web Development</td>
+            <td>Mr. Kumar</td>
+        </tr>
+        <tr>
+            <td>Evening</td>
+            <td>4:00 PM</td>
+            <td>Future of Technology</td>
+            <td>Dr. Singh</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">All sessions are subject to schedule changes.</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+</section>
+
+<hr>
+
+<section id="report">
+    <h1>Q8. ABC Public School - Student Report</h1>
+
+```
+<table border="1">
+    <caption>Academic Performance Report</caption>
+    <thead>
+        <tr>
+            <th title="Student's full name">Student Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="5">Ujjwal Gaur</td>
+            <td>English</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>Computer Science</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Social Science</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <th colspan="2">Total Marks</th>
+            <td>440 / 500</td>
+        </tr>
+        <tr>
+            <th colspan="2">Percentage</th>
+            <td>88%</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+</section>
+
+<hr>
+
+<section id="travel">
+    <h1>Q9. Top 3 Travel Destinations</h1>
+
+```
+<main>
+    <article>
+        <h2>1. Taj Mahal, Agra</h2>
+        <img src="https://placehold.co/300x180?text=Taj+Mahal" alt="Taj Mahal in Agra" width="300">
+        <p>The Taj Mahal is a famous marble monument in Agra, India.</p>
+        <blockquote>
+            A beautiful monument with remarkable architecture.
+            <cite>— Travel Visitor</cite>
+        </blockquote>
+    </article>
+
+    <article>
+        <h2>2. Jaipur, Rajasthan</h2>
+        <img src="https://placehold.co/300x180?text=Jaipur" alt="Jaipur destination" width="300">
+        <p>Jaipur is known for its historic forts, palaces and colorful culture.</p>
+        <blockquote>
+            A wonderful place to explore history and traditions.
+            <cite>— Travel Visitor</cite>
+        </blockquote>
+    </article>
+
+    <article>
+        <h2>3. Manali, Himachal Pradesh</h2>
+        <img src="https://placehold.co/300x180?text=Manali" alt="Manali mountains" width="300">
+        <p>Manali is a mountain destination known for scenic landscapes.</p>
+        <blockquote>
+            A peaceful destination surrounded by beautiful mountains.
+            <cite>— Travel Visitor</cite>
+        </blockquote>
+    </article>
+</main>
+
+<aside>
+    <h2>Travel Tips</h2>
+    <ul>
+        <li>Plan your trip in advance.</li>
+        <li>Carry valid identification.</li>
+        <li>Check the weather forecast.</li>
+        <li>Keep emergency contacts handy.</li>
+    </ul>
+</aside>
+
+<footer>
+    <p>&copy; 2026 Travel Guide. All rights reserved.</p>
+</footer>
+```
+
+</section>
+
+<hr>
+
+<section id="dropdown">
+    <h1>Q10. Dropdown-Based Selection</h1>
+
+```
+<form action="#" method="get">
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option selected value="India">India</option>
+        <option value="Canada">Canada</option>
+        <option value="Japan">Japan</option>
+    </select>
+    <br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state">
+        <option selected value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Maharashtra">Maharashtra</option>
+    </select>
+    <br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+        <option selected value="Mathura">Mathura</option>
+        <option value="Agra">Agra</option>
+        <option value="Jaipur">Jaipur</option>
+    </select>
+    <br><br>
+
+    <label for="place">Favorite Tourist Place:</label>
+    <select id="place" name="place">
+        <option selected value="Taj Mahal">Taj Mahal</option>
+        <option value="Hawa Mahal">Hawa Mahal</option>
+        <option value="India Gate">India Gate</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Submit Choices</button>
+</form>
+
+<p>Selected choices: India, Uttar Pradesh, Mathura, and Taj Mahal.</p>
+```
+
+</section>
+
+<hr>
+
+<section id="news">
+    <h1>Q11. Daily News</h1>
+
+```
+<header>
+    <h2>Daily Tech & News</h2>
+</header>
+
+<nav>
+    <a href="#sportsNews">Sports</a> |
+    <a href="#techNews">Technology</a> |
+    <a href="#politicsNews">Politics</a>
+</nav>
+
+<main>
+    <article id="sportsNews">
+        <h2>Sports: The Importance of Fitness</h2>
+        <p>Published on <time datetime="2026-10-28">October 28, 2026</time></p>
+        <p>Regular physical activity supports health and teamwork.</p>
+        <p>Source: <a href="https://www.who.int/">World Health Organization</a></p>
+    </article>
+
+    <article id="techNews">
+        <h2>Technology: Artificial Intelligence</h2>
+        <p>Published on <time datetime="2026-10-28">October 28, 2026</time></p>
+        <p>Artificial intelligence is used in many modern applications.</p>
+        <p>Source: <a href="https://www.ibm.com/think/topics/artificial-intelligence">IBM AI Overview</a></p>
+    </article>
+
+    <article id="politicsNews">
+        <h2>Politics: Understanding Democracy</h2>
+        <p>Published on <time datetime="2026-10-28">October 28, 2026</time></p>
+        <p>Democracy gives citizens a role in choosing their representatives.</p>
+        <p>Source: <a href="https://www.un.org/en/">United Nations</a></p>
+    </article>
+</main>
+
+<aside>
+    <h2>Popular Topics</h2>
+    <ul>
+        <li>Artificial Intelligence</li>
+        <li>Sports</li>
+        <li>Education</li>
+        <li>Environment</li>
+    </ul>
+</aside>
+
+<footer>
+    <p>Contact: news@example.com</p>
+    <p>&copy; 2026 Daily Tech & News. All rights reserved.</p>
+</footer>
+```
+
+</section>
+
+<hr>
+
+<section id="quotes">
+    <h1>Q12. Quotation Showcase</h1>
+
+```
+<section>
+    <h2>Knowledge</h2>
+    <blockquote>
+        An investment in knowledge pays the best interest.
+    </blockquote>
+    <p><cite>Benjamin Franklin</cite></p>
+</section>
+
+<section>
+    <h2>Perseverance</h2>
+    <blockquote>
+        It always seems impossible until it's done.
+    </blockquote>
+    <p><cite>Nelson Mandela</cite></p>
+</section>
+
+<section>
+    <h2>Imagination</h2>
+    <blockquote>
+        Imagination is more important than knowledge.
+    </blockquote>
+    <p><cite>Albert Einstein</cite></p>
+</section>
+
+<p>Quotes inspire people by sharing wisdom, encouraging perseverance and offering new perspectives on life.</p>
+```
+
+</section>
+
+<hr>
+
+<section id="blog">
+    <h1>Q13. My Personal Blog</h1>
+
+```
+<header>
+    <h2>Ujjwal's Blog</h2>
+</header>
+
+<nav>
+    <a href="#blog">Home</a> |
+    <a href="#firstBlog">Blogs</a> |
+    <a href="#blogAbout">About</a>
+</nav>
+
+<main>
+    <article id="firstBlog">
+        <h2>My First Blog</h2>
+        <p>Published on <time datetime="2026-10-20">October 20, 2026</time></p>
+        <p>This is my first blog where I share my learning journey in programming and technology.</p>
+        <blockquote>
+            Every expert was once a beginner.
+        </blockquote>
+    </article>
+
+    <article>
+        <h2>Things I Learned This Week</h2>
+        <p>Published on <time datetime="2026-10-27">October 27, 2026</time></p>
+        <p>This week I practiced HTML, JavaScript, Git and problem-solving techniques.</p>
+        <blockquote>
+            Consistent practice helps build strong skills.
+        </blockquote>
+    </article>
+
+    <section id="blogAbout">
+        <h2>About This Blog</h2>
+        <p>This blog documents my learning experiences and programming projects.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Written by Ujjwal Gaur</p>
+</footer>
+```
+
+</section>
+
+<hr>
+
+<section id="movies">
+    <h1>Q14. Movie Database</h1>
+
+```
+<table border="1">
+    <caption>Popular Movies Database</caption>
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>IMDb Rating</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Inception</td>
+            <td>Sci-Fi</td>
+            <td>2010</td>
+            <td>8.8</td>
+            <td><a href="https://www.imdb.com/title/tt1375666/" title="Inception on IMDb">View</a></td>
+        </tr>
+        <tr>
+            <td>Interstellar</td>
+            <td>Sci-Fi</td>
+            <td>2014</td>
+            <td>8.7</td>
+            <td><a href="https://www.imdb.com/title/tt0816692/" title="Interstellar on IMDb">View</a></td>
+        </tr>
+        <tr>
+
