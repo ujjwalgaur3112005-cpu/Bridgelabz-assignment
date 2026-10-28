@@ -1,0 +1,19 @@
+javascript
+let user = {
+    name: "Ujjwal",
+    showName: () => {
+        console.log(this.name);
+    }
+};
+
+user.showName();
+
+let user2 = {
+    name: "Ujjwal",
+    showName: function() {
+        console.log(this.name);
+    }
+};
+
+user2.showName();
+
