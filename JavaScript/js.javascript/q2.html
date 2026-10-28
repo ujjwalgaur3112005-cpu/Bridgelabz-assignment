@@ -1,0 +1,17 @@
+let userName = "Ujjwal";
+let age = 21;
+let isStudent = true;
+let subjects = ["Java", "JavaScript", "SQL"];
+let user = { name: "Ujjwal", city: "Mathura" };
+let address = null;
+let result;
+
+console.table([
+{ Label: "User Name", Value: userName, Type: typeof userName },
+{ Label: "Age", Value: age, Type: typeof age },
+{ Label: "Student", Value: isStudent, Type: typeof isStudent },
+{ Label: "Subjects", Value: subjects.join(", "), Type: Array.isArray(subjects) ? "array" : typeof subjects },
+{ Label: "User Object", Value: JSON.stringify(user), Type: typeof user },
+{ Label: "Address", Value: address, Type: address === null ? "null" : typeof address },
+{ Label: "Result", Value: result, Type: typeof result }
+]);
