@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .box {
+            width: 250px;
+            margin: 30px auto;
+            border: 10px solid orange;
+            padding: 25px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .content {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .description {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="description">CSS Box Model</h1>
+
+    <div class="box">
+        Border
+        <div class="content">
+            Content Area
+        </div>
+        Padding is inside the border.
+    </div>
+
+    <p class="description">The CSS box model consists of content, padding, border and margin.</p>
+</body>
+</html>

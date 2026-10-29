@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .box {
+            width: 220px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .shadow-one {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .shadow-two {
+            box-shadow: 0 0 15px blue;
+        }
+
+        .shadow-three {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Shadow Examples</h1>
+
+    <div class="container">
+        <div class="box shadow-one">Simple Shadow</div>
+        <div class="box shadow-two">Blue Shadow</div>
+        <div class="box shadow-three">Soft Shadow</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .items p:first-child {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .items p:nth-child(even) {
+            background-color: #e0f2fe;
+            padding: 10px;
+        }
+
+        .items p:last-child {
+            color: green;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+        button:active {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced CSS Selectors</h1>
+
+    <div class="items">
+        <p>First Paragraph</p>
+        <p>Second Paragraph</p>
+        <p>Third Paragraph</p>
+        <p>Fourth Paragraph</p>
+    </div>
+
+    <p><a href="#">Move your mouse over this link</a></p>
+
+    <input type="text" placeholder="Click to focus">
+
+    <button>Click Me</button>
+</body>
+</html>

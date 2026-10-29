@@ -1,0 +1,109 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: filter 0.5s ease;
+        }
+
+        .blur img {
+            filter: blur(2px);
+        }
+
+        .grayscale img {
+            filter: grayscale(100%);
+        }
+
+        .sepia img {
+            filter: sepia(100%);
+        }
+
+        .brightness img {
+            filter: brightness(60%);
+        }
+
+        .contrast img {
+            filter: contrast(200%);
+        }
+
+        .hue img {
+            filter: hue-rotate(120deg);
+        }
+
+        .gallery-item:hover img {
+            filter: none;
+        }
+
+        .gallery-item p {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Image Filter Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item blur">
+            <img src="https://picsum.photos/id/1015/400/300" alt="Mountain landscape">
+            <p>Blur Filter</p>
+        </div>
+
+        <div class="gallery-item grayscale">
+            <img src="https://picsum.photos/id/1011/400/300" alt="Nature landscape">
+            <p>Grayscale Filter</p>
+        </div>
+
+        <div class="gallery-item sepia">
+            <img src="https://picsum.photos/id/1018/400/300" alt="Mountain view">
+            <p>Sepia Filter</p>
+        </div>
+
+        <div class=
+
