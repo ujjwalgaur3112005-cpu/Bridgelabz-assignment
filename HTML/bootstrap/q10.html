@@ -1,0 +1,106 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World Travel Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Explore World</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Explore Beautiful Destinations</h1>
+
+    <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner rounded">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="https://placehold.co/1200x450/0d6efd/ffffff?text=Manali"
+                     class="d-block w-100" alt="Manali">
+                <div class="carousel-caption">
+                    <h3>Discover Manali</h3>
+                    <p>Experience the beauty of the mountains.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="https://placehold.co/1200x450/198754/ffffff?text=Goa"
+                     class="d-block w-100" alt="Goa">
+                <div class="carousel-caption">
+                    <h3>Relax in Goa</h3>
+                    <p>Enjoy beautiful beaches and sunsets.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://placehold.co/1200x450/6f42c1/ffffff?text=Jaipur"
+                     class="d-block w-100" alt="Jaipur">
+                <div class="carousel-caption">
+                    <h3>Explore Jaipur</h3>
+                    <p>Discover India's royal heritage.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#travelCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#travelCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="mt-5">
+        <h4>Booking Completion</h4>
+        <div class="progress" role="progressbar" aria-label="Booking completion"
+             aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                 style="width: 70%">70%</div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center p-4">
+    <h5>Contact Explore World</h5>
+    <p class="mb-1">Email: info@example.com</p>
+    <p class="mb-0">Phone: +91 98765 43210</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
